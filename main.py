@@ -3,7 +3,6 @@ import functions
 import time
 
 now = time.strftime("%d.%m.%Y %H:%M:%S")
-print("The time is below:")
 print("It is", now)
 
 while True:
