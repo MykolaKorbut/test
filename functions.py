@@ -6,17 +6,14 @@ def get_todos(filepath=FILEPATH):
     to-do items stripped of newlines
     """
     with open(filepath, 'r') as file_local:
-        todos_local = file_local.read().splitlines()
+        todos_local = file_local.readlines()
     return todos_local
 
 
 def write_todos(todos_arg, filepath=FILEPATH):
-    """ Write the to-do items list in the text file,
-    adding newlines.
-    """
-    todos_arg = [arg + '\n' for arg in todos_arg]
-    with open(filepath, 'w') as file_local:
-        file_local.writelines(todos_arg)
+    """ Write the to-do items list in the text file."""
+    with open(filepath, 'w') as file:
+        file.writelines(todos_arg)
 
 
 if __name__ == "__main__":
